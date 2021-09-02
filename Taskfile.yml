@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  ieee:
+    cmds:
+      - docker run --rm -v $PWD:/data --user `id -u`:`id -g` pandoc/latex
+          --from=markdown 
+          --to=latex 
+          --template=/data/ieee-template.latex 
+          --output=/data/{{.CLI_ARGS}}.pdf 
+          /data/{{.CLI_ARGS}}.md
+    silent: false
+    desc: |
+      Generate pdf file in IEEE format from the provided markdown.
+      Syntax: task ieee -- <md file name without extension>
