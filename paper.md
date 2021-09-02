@@ -18,7 +18,7 @@ header-includes: |
 
 ---
 
-## Introduction
+# Introduction
 When the programmer finishes writing his code, he creates a pull request to suggest merging its changes into the main repository branch. In order to assure the quality of the code, the reviewer checks the code by watching it and looking for the programmer's mistakes. When the reviewer finds a mistake, he writes a commentary to the specific code line. He wants to highlight to pay the programmer's attention to the line and change it according to the reviewer's commentary. It often happens that the programmers eventually make several mistakes in the same area for some reason.
 
 This information might be used to apply the machine learning algorithm. We may detect the area, which is often highlighted during the code reviews, and then changed for proper behavior and in future pull requests check that this area was or was not touched with changes, and, if it was touched, we might notify the reviewer to pay attention to such code area and apply some standard optimizations for it, in order to improve the quality of the code.
